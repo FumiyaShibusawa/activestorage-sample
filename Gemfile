@@ -28,6 +28,7 @@ group :development do
   gem 'pry-doc'
   gem 'pry-rails'
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'

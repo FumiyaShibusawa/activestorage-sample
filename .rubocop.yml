@@ -1,0 +1,63 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  DisplayStyleGuide: true
+  StyleGuideBaseURL: https://github.com/fortissimo1997/ruby-style-guide/blob/japanese/README.ja.md
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
+    - 'node_modules/**/*'
+
+Rails:
+  Enabled: true
+
+AsciiComments:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/routes.rb'
+    - 'config/environments/*.rb'
+    - 'db/migrate/*.rb'
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+
+Metrics/LineLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+  IgnoredPatterns: ['\s*#']
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  IgnoredMethods:
+    - 'exit'
+    - 'mount'
+    - 'puts'
+    - 'require'
+    - 'require_relative'
+    - 'run'
+    - 'to'
+    - 'not_to'
+  Exclude:
+    - 'config/puma.rb'
+    - 'db/migrate/*.rb'
+    - 'Gemfile'
+
+Layout/ExtraSpacing:
+  Exclude:
+    - 'db/migrate/*.rb'
